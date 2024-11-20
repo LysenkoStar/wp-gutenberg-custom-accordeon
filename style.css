@@ -1,0 +1,102 @@
+/* Base styles for the accordion */
+.accordion {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px 0;
+    max-width: 100%;
+}
+
+.accordion-item {
+    background: #f1f1f1;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.accordion-title {
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.accordion-content {
+    padding: 10px;
+    display: none;
+    background-color: #fafafa;
+    border-top: 1px solid #ccc;
+}
+
+.accordion-item.active .accordion-content {
+    display: block;
+}
+
+.accordion-items .accordion-item-editor {
+    margin-bottom: 10px;
+}
+
+.accordion-items .accordion-item-editor button {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.accordion-items .accordion-item-editor div {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.accordion-items .accordion-item-editor .rich-text {
+    padding: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.accordion-items .accordion-item-editor .open {
+    background-color: #e0e0e0;
+}
+
+/* Hover effect for the title */
+.accordion-title:hover {
+    background-color: #ddd;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .accordion-title {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .accordion-content {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .accordion-title {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .accordion-content {
+        padding: 6px;
+    }
+}
+
+/* Mobile first (320px and above) */
+@media (min-width: 320px) and (max-width: 480px) {
+    .accordion {
+        margin: 10px 0;
+    }
+
+    .accordion-item {
+        margin-bottom: 8px;
+    }
+}
